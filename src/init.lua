@@ -3,6 +3,7 @@
 
 local GetDependencies = require(script.Utility.GetDependencies)
 
+local useAsync = require(script.useAsync)
 local useClickOutside = require(script.useClickOutside)
 local useCurrentCamera = require(script.useCurrentCamera)
 local useDelayedValue = require(script.useDelayedValue)
@@ -33,6 +34,7 @@ local useViewportSize = require(script.useViewportSize)
 local Hooks = {
 	GetDependencies = GetDependencies,
 
+	useAsync = useAsync,
 	useClickOutside = useClickOutside,
 	useCurrentCamera = useCurrentCamera,
 	useDelayedValue = useDelayedValue,
