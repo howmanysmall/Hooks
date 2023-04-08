@@ -12,6 +12,10 @@ type UseAsyncState<T> = {
 --[=[
 	`useAsync` wraps a Promise to a state.
 
+	:::info
+	Taken from [here](https://github.com/littensy/roact-hooked-plus/blob/master/src/use-promise.ts)
+	:::
+
 	@tag State Management
 	@within Hooks
 	@param promise Promise<T> | () -> Promise<T> -- The Promise to wrap.
