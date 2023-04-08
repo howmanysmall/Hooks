@@ -1,0 +1,14 @@
+{
+	"name": "Hooks",
+	"servePort": 25565,
+	"tree": {
+		"$className": "DataModel",
+		"$ignoreUnknownInstances": true,
+		"ReplicatedStorage": {
+			"$className": "ReplicatedStorage",
+			"$ignoreUnknownInstances": true,
+			"Hooks": {"$path": "default.project.json"},
+			"$path": "Packages"
+		}
+	}
+}

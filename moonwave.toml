@@ -1,0 +1,18 @@
+changelog = true
+gitSourceBranch = "main"
+
+[docusaurus]
+tagline = "A collection of hooks for React"
+
+[[navbar.items]]
+href = "https://discord.gg/nhDpg96Srt"
+label = "Discord"
+position = "right"
+
+[home]
+enabled = true
+includeReadme = false
+
+[[home.features]]
+title = "Made for React"
+description = "All of the hooks were designed to work with RoactHooks and React."

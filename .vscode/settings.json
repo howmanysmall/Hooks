@@ -1,0 +1,26 @@
+{
+	"luau-lsp.autocompleteEnd": true,
+	"luau-lsp.completion.addParentheses": true,
+	"luau-lsp.completion.addTabstopAfterParentheses": true,
+	"luau-lsp.completion.enabled": true,
+	"luau-lsp.completion.fillCallArguments": true,
+	"luau-lsp.completion.suggestImports": true,
+	"luau-lsp.diagnostics.includeDependents": true,
+	"luau-lsp.diagnostics.strictDatamodelTypes": false,
+	"luau-lsp.plugin.enabled": true,
+	"luau-lsp.require.mode": "relativeToFile",
+	"luau-lsp.sourcemap.autogenerate": true,
+	"luau-lsp.sourcemap.rojoProjectFile": "place.project.json",
+	"robloxLsp.completion.enable": false,
+	"robloxLsp.completion.endAutocompletion": false,
+	"robloxLsp.diagnostics.disable": ["undefined-type"],
+	"robloxLsp.diagnostics.globals": ["PluginManager"],
+	"robloxLsp.suggestedImports.importPathType": "Both",
+	"robloxLsp.suggestedImports.importScriptChildren": true,
+	"selene.run": "onSave",
+	"stylua.styluaPath": "C:/Path/stylua2Roact.exe",
+	"stylua.styluaRoactPath": "C:/Path/stylua2Roact.exe",
+	"luau-lsp.types.definitionFiles": [
+		"testez.d.lua"
+	],
+}
