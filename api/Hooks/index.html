@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="plugin-moonwave plugin-id-moonwave">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v2.3.1">
+<title data-rh="true">Hooks | Hooks</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://howmanysmall.github.io/Hooks/api/Hooks"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" property="og:title" content="Hooks | Hooks"><meta data-rh="true" name="description" content="A collection of hooks made for React."><meta data-rh="true" property="og:description" content="A collection of hooks made for React."><link data-rh="true" rel="canonical" href="https://howmanysmall.github.io/Hooks/api/Hooks"><link data-rh="true" rel="alternate" href="https://howmanysmall.github.io/Hooks/api/Hooks" hreflang="en"><link data-rh="true" rel="alternate" href="https://howmanysmall.github.io/Hooks/api/Hooks" hreflang="x-default"><link rel="stylesheet" href="/Hooks/assets/css/styles.9b3dbd17.css">
+<link rel="preload" href="/Hooks/assets/js/runtime~main.7bff0ade.js" as="script">
+<link rel="preload" href="/Hooks/assets/js/main.1af443d0.js" as="script">
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
+<div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/Hooks/"><b class="navbar__title text--truncate">Hooks</b></a><a class="navbar__item navbar__link" href="/Hooks/docs/intro">Docs</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/Hooks/api/">API</a><a class="navbar__item navbar__link" href="/Hooks/changelog">Changelog</a></div><div class="navbar__items navbar__items--right"><a href="https://discord.gg/nhDpg96Srt" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Discord<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><a href="https://github.com/howmanysmall/Hooks" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="searchBox_ZlJk"><div class="navbar__search"><span aria-label="expand searchbar" role="button" class="search-icon" tabindex="0"></span><input type="search" id="search_input_react" placeholder="Press S to Search..." aria-label="Search" class="navbar__search-input search-bar"></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0 docPageContainer_wNNk"><div class="docPage_Dpn1"><div class="docSidebarContainer_o_re"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/Hooks/api/Hooks">​Hooks</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/Hooks/api/Types">​Types</a></li></ul></nav></div></div><main class="docMainContainer_HJE1"><div class="container padding-vert--lg"><div class="row"><div class="col docItemCol_MU3C"><div class="docItemContainer_Wv98"><article><div class="member_J0w1 markdown"><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_oUs_"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><header><h1 class="docTitle_mZRt" style="text-decoration:none"><span style="display:inline-block">Hooks</span></h1><div class="luaClassTags_EipM"></div><div>
+<p>A collection of hooks made for React.</p>
+</div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="useClickOutside"><code style="text-decoration:none">useClickOutside</code><a href="#useClickOutside" class="hash-link" aria-label="Direct link to useClickOutside" title="Direct link to useClickOutside">​</a></h3><span class="badge_Ba2I" style="color:#349AD5"><span class="badgeTooltip_cWXP">This item only works when running on the client.</span><span class="badgeToolTipTail_H9D_"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 337 304" fill="#349AD5" role="img" aria-label="This item only works when running on the client."><path d="M0 201h337v36H0v-36zm0 0zM0 0v188h337V0H0zM218 287h30c12 0 12 17 0 17H88c-11 0-11-17 0-17h31l10-39h79l10 39z"></path></svg> <!-- -->Client</span></span><span class="docTag__6UZ" style="border-color:#ff5252;color:#ff5252">User Interface</span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/howmanysmall/Hooks/blob/main/src/useClickOutside.lua#L55"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Hooks<!-- -->.</code><code class="green_DgR4">useClickOutside</code><code>(</code><div class="inset_uKQm"><div><code>onClick<!-- -->: </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>A callback to call when a click or touch event is detected outside of the element.</p>
+</span></span></div><div><code>userInputTypes?<!-- -->: </code><code class="purple_ieR2">{</code><code class="blue_P4bS">Enum.UserInputType</code><code class="purple_ieR2">}</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>A list of user input types to detect. Defaults to <code>Enum.UserInputType.MouseButton1</code> and <code>Enum.UserInputType.Touch</code>.</p>
+</span></span></div><div><code>guiObjects?<!-- -->: </code><code class="purple_ieR2">{</code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/GuiObject" target="_blank" rel="noopener noreferrer">GuiObject<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
+<p>A list of elements to detect clicks outside of. Defaults to the element returned by <code>useRef</code>.</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">Ref</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/GuiObject" target="_blank" rel="noopener noreferrer">GuiObject<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="op_lSLc">&gt;</code><span class="inlineDescription_G7Er">-- <span>
+<p>A ref to the element to detect clicks outside of.</p>
+</span></span></div><div>
+<p>A hook used to detect click and touch events outside of specified element.</p>
+<h3>Luau:</h3>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> <span class="token keyword">function</span> <span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token keyword">local</span> visible<span class="token punctuation">,</span> setVisible <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">useBinding</span><span class="token punctuation">(</span><span class="token keyword">false</span><span class="token punctuation">)</span>
+	<span class="token keyword">local</span> ref <span class="token operator">=</span> Hooks<span class="token punctuation">.</span><span class="token function">useClickOutside</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+		<span class="token function">setVisible</span><span class="token punctuation">(</span><span class="token keyword">false</span><span class="token punctuation">)</span>
+	<span class="token keyword">end</span><span class="token punctuation">)</span>
+
+	<span class="token keyword">return</span> React<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"Frame"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+		AnchorPoint <span class="token operator">=</span> Vector2<span class="token punctuation">.</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token number">0.5</span><span class="token punctuation">,</span> <span class="token number">0.5</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+		BackgroundColor3 <span class="token operator">=</span> Color3<span class="token punctuation">.</span><span class="token function">fromRGB</span><span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+		BorderSizePixel <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>
+		Position <span class="token operator">=</span> UDim2<span class="token punctuation">.</span><span class="token function">fromScale</span><span class="token punctuation">(</span><span class="token number">0.5</span><span class="token punctuation">,</span> <span class="token number">0.5</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+		Size <span class="token operator">=</span> UDim2<span class="token punctuation">.</span><span class="token function">fromOffset</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+		Visible <span class="token operator">=</span> visible<span class="token punctuation">,</span>
+
+		ref <span class="token operator">=</span> ref<span class="token punctuation">,</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">end</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="useCurrentCamera"><code style="text-decoration:none">useCurrentCamera</code><a href="#useCurrentCamera" class="hash-link" aria-label="Direct link to useCurrentCamera" title="Direct link to useCurrentCamera">​</a></h3><span class="badge_Ba2I" style="color:#349AD5"><span class="badgeTooltip_cWXP">This item only works when running on the client.</span><span class="badgeToolTipTail_H9D_"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 337 304" fill="#349AD5" role="img" aria-label="This item only works when running on the client."><path d="M0 201h337v36H0v-36zm0 0zM0 0v188h337V0H0zM218 287h30c12 0 12 17 0 17H88c-11 0-11-17 0-17h31l10-39h79l10 39z"></path></svg> <!-- -->Client</span></span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/howmanysmall/Hooks/blob/main/src/useCurrentCamera.lua#L16"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Hooks<!-- -->.</code><code class="green_DgR4">useCurrentCamera</code><code>(</code><div class="inset_uKQm"><div><code>onChange?<!-- -->: </code><code class="purple_ieR2">(</code><code>currentCamera<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Camera" target="_blank" rel="noopener noreferrer">Camera<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><span class="inlineDescription_G7Er">-- <span>
+<p>A callback that is called when the current camera changes.</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Camera" target="_blank" rel="noopener noreferrer">Camera<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The current camera.</p>
+</span></span></div><div>
+<p>A hook used for getting the current camera.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="useDelayedValue"><code style="text-decoration:none">useDelayedValue</code><a href="#useDelayedValue" class="hash-link" aria-label="Direct link to useDelayedValue" title="Direct link to useDelayedValue">​</a></h3><span class="docTag__6UZ" style="border-color:#dc0073;color:#dc0073">State Management</span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/howmanysmall/Hooks/blob/main/src/useDelayedValue.lua#L31"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Hooks<!-- -->.</code><code class="green_DgR4">useDelayedValue</code><code>(</code><div class="inset_uKQm"><div><code>value<!-- -->: </code><code class="blue_P4bS">T</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>The value to delay.</p>
+</span></span></div><div><code>delayInSeconds<!-- -->: </code><code class="blue_P4bS">number</code><span class="inlineDescription_G7Er">-- <span>
+<p>The amount of time to delay the value by.</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">T</code><span class="inlineDescription_G7Er">-- <span>
+<p>The delayed value.</p>
+</span></span></div><div>
+<p>A hook used for delaying a value.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="useExternalEvent"><code style="text-decoration:none">useExternalEvent</code><a href="#useExternalEvent" class="hash-link" aria-label="Direct link to useExternalEvent" title="Direct link to useExternalEvent">​</a></h3><span class="docTag__6UZ" style="border-color:#2b8ab6;color:#2b8ab6">Lifecycle</span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/howmanysmall/Hooks/blob/main/src/useExternalEvent.lua#L22"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Hooks<!-- -->.</code><code class="green_DgR4">useExternalEvent</code><code>(</code><div class="inset_uKQm"><div><code>event<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/RBXScriptSignal" target="_blank" rel="noopener noreferrer">RBXScriptSignal<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>The event to connect to.</p>
+</span></span></div><div><code>callback<!-- -->: </code><code class="purple_ieR2">(</code><code class="blue_P4bS">...any</code><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><span class="inlineDescription_G7Er">-- <span>
+<p>The callback to connect to the event.</p>
+</span></span></div></div><code>) → </code><code>(</code><code>)</code></div><div>
+<p>
+  A hook that connects and disconnects a callback to an event. This is really
+  just a fancy <code>useEffect</code> wrapper.
+</p>
+<h3>Luau:</h3>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> <span class="token keyword">function</span> <span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">end</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="useForceUpdate"><code style="text-decoration:none">useForceUpdate</code><a href="#useForceUpdate" class="hash-link" aria-label="Direct link to useForceUpdate" title="Direct link to useForceUpdate">​</a></h3><span class="docTag__6UZ" style="border-color:#2b8ab6;color:#2b8ab6">Lifecycle</span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/howmanysmall/Hooks/blob/main/src/useForceUpdate.lua#L16"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Hooks<!-- -->.</code><code class="green_DgR4">useForceUpdate</code><code>(</code><code>) → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><span class="inlineDescription_G7Er">-- <span>
+<p>The function to call to force a re-render.</p>
+</span></span></div><div>
+<p>A hook that creates a function used to force a component to re-render.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="useId"><code style="text-decoration:none">useId</code><a href="#useId" class="hash-link" aria-label="Direct link to useId" title="Direct link to useId">​</a></h3><span class="docTag__6UZ" style="border-color:#dc0073;color:#dc0073">State Management</span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/howmanysmall/Hooks/blob/main/src/useId.lua#L14"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Hooks<!-- -->.</code><code class="green_DgR4">useId</code><code>(</code><div class="inset_uKQm"><div><code>staticId?<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
+<p>A static id to use instead of a generated one.</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
+<p>The generated id.</p>
+</span></span></div><div>
+<p>The <code>useId</code> hook generates random id that persists across renders. Hook is usually used to bind input elements to labels. Generated random id is saved to ref and will not change unless component is unmounted.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="useMemoWithCleanup"><code style="text-decoration:none">useMemoWithCleanup</code><a href="#useMemoWithCleanup" class="hash-link" aria-label="Direct link to useMemoWithCleanup" title="Direct link to useMemoWithCleanup">​</a></h3><span class="docTag__6UZ" style="border-color:#dc0073;color:#dc0073">State Management</span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/howmanysmall/Hooks/blob/main/src/useMemoWithCleanup.lua#L20"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Hooks<!-- -->.</code><code class="green_DgR4">useMemoWithCleanup</code><code>(</code><div class="inset_uKQm"><div><code>createValue<!-- -->: </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="blue_P4bS">T</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>The function to create the value.</p>
+</span></span></div><div><code>cleanupValue<!-- -->: </code><code class="purple_ieR2">(</code><code>value<!-- -->: </code><code class="blue_P4bS">T</code><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>The function to clean up the value.</p>
+</span></span></div><div><code>dependencies?<!-- -->: </code><code class="purple_ieR2">{</code><code class="blue_P4bS">unknown</code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
+<p>The dependencies to check for changes.</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">T</code><span class="inlineDescription_G7Er">-- <span>
+<p>The memoized value.</p>
+</span></span></div><div>
+<p>A hook that memoizes a value and cleans it up when the dependencies change.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="usePrevious"><code style="text-decoration:none">usePrevious</code><a href="#usePrevious" class="hash-link" aria-label="Direct link to usePrevious" title="Direct link to usePrevious">​</a></h3><span class="docTag__6UZ" style="border-color:#dc0073;color:#dc0073">State Management</span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/howmanysmall/Hooks/blob/main/src/usePrevious.lua#L14"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Hooks<!-- -->.</code><code class="green_DgR4">usePrevious</code><code>(</code><div class="inset_uKQm"><div><code>value<!-- -->: </code><code class="blue_P4bS">T</code><span class="inlineDescription_G7Er">-- <span>
+<p>The value to store.</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">T?</code><span class="inlineDescription_G7Er">-- <span>
+<p>The previous value of the state.</p>
+</span></span></div><div>
+<p>The <code>usePrevious</code> hook stores the previous value of a state in a ref, it returns undefined on initial render and the previous value of a state after rerender.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="useRainbowColorSequence"><code style="text-decoration:none">useRainbowColorSequence</code><a href="#useRainbowColorSequence" class="hash-link" aria-label="Direct link to useRainbowColorSequence" title="Direct link to useRainbowColorSequence">​</a></h3><span class="docTag__6UZ" style="border-color:#218c74;color:#218c74">UI</span><span class="docTag__6UZ" style="border-color:#ff793f;color:#ff793f">Effects</span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/howmanysmall/Hooks/blob/main/src/useRainbowColorSequence.lua#L42"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Hooks<!-- -->.</code><code class="green_DgR4">useRainbowColorSequence</code><code>(</code><div class="inset_uKQm"><div><code>parameters?<!-- -->: </code><code class="blue_P4bS">IParameters</code><span class="inlineDescription_G7Er">-- <span>
+<p>The parameters for the hook.</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">Binding</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/ColorSequence" target="_blank" rel="noopener noreferrer">ColorSequence<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="op_lSLc">&gt;</code><span class="inlineDescription_G7Er">-- <span>
+<p>The rainbow color sequence.</p>
+</span></span></div><div>
+<p>An example hook that uses a rainbow color sequence.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="useRendersSpy"><code style="text-decoration:none">useRendersSpy</code><a href="#useRendersSpy" class="hash-link" aria-label="Direct link to useRendersSpy" title="Direct link to useRendersSpy">​</a></h3><span class="docTag__6UZ" style="border-color:#2b8ab6;color:#2b8ab6">Lifecycle</span><span class="docTag__6UZ" style="border-color:#925FB9;color:#925FB9">Debugging</span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/howmanysmall/Hooks/blob/main/src/useRendersSpy.lua#L13"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Hooks<!-- -->.</code><code class="green_DgR4">useRendersSpy</code><code>(</code><code>) → </code><code class="blue_P4bS">number</code><span class="inlineDescription_G7Er">-- <span>
+<p>The amount of renders.</p>
+</span></span></div><div>
+<p>Returns the amount of times the component has been rendered since mounting. This is a very useful hook for testing.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="useScale"><code style="text-decoration:none">useScale</code><a href="#useScale" class="hash-link" aria-label="Direct link to useScale" title="Direct link to useScale">​</a></h3><span class="badge_Ba2I" style="color:#349AD5"><span class="badgeTooltip_cWXP">This item only works when running on the client.</span><span class="badgeToolTipTail_H9D_"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 337 304" fill="#349AD5" role="img" aria-label="This item only works when running on the client."><path d="M0 201h337v36H0v-36zm0 0zM0 0v188h337V0H0zM218 287h30c12 0 12 17 0 17H88c-11 0-11-17 0-17h31l10-39h79l10 39z"></path></svg> <!-- -->Client</span></span><span class="docTag__6UZ" style="border-color:#218c74;color:#218c74">UI</span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/howmanysmall/Hooks/blob/main/src/useScale.lua#L18"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Hooks<!-- -->.</code><code class="green_DgR4">useScale</code><code>(</code><div class="inset_uKQm"><div><code>scale<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>The scale to use for the UI element.</p>
+</span></span></div><div><code>goalSize<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector2" target="_blank" rel="noopener noreferrer">Vector2<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="op_lSLc"> | </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector3" target="_blank" rel="noopener noreferrer">Vector3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The size of the UI element. Recommended to use Vector3 as it is faster.</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">Binding</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">number</code><code class="op_lSLc">&gt;</code><span class="inlineDescription_G7Er">-- <span>
+<p>The scale to use for the UI element.</p>
+</span></span></div><div>
+<p>A hook used for scaling UI elements to fit the current screen.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="useShallowEffect"><code style="text-decoration:none">useShallowEffect</code><a href="#useShallowEffect" class="hash-link" aria-label="Direct link to useShallowEffect" title="Direct link to useShallowEffect">​</a></h3><span class="docTag__6UZ" style="border-color:#2b8ab6;color:#2b8ab6">Lifecycle</span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/howmanysmall/Hooks/blob/main/src/useShallowEffect.lua#L52"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Hooks<!-- -->.</code><code class="green_DgR4">useShallowEffect</code><code>(</code><div class="inset_uKQm"><div><code>callback<!-- -->: </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>The callback to run when the dependencies change.</p>
+</span></span></div><div><code>dependencies?<!-- -->: </code><code class="purple_ieR2">{</code><code class="blue_P4bS">unknown</code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
+<p>The dependencies to compare.</p>
+</span></span></div></div><code>) → </code><code>(</code><code>)</code></div><div>
+<p>
+  <code>useEffect</code> drop in replacement with dependencies shallow comparison. <code>useShallowEffect</code> works
+  exactly like <code>useEffect</code> but performs shallow dependencies comparison instead of referential comparison.
+</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="useStrokeScale"><code style="text-decoration:none">useStrokeScale</code><a href="#useStrokeScale" class="hash-link" aria-label="Direct link to useStrokeScale" title="Direct link to useStrokeScale">​</a></h3><span class="badge_Ba2I" style="color:#349AD5"><span class="badgeTooltip_cWXP">This item only works when running on the client.</span><span class="badgeToolTipTail_H9D_"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 337 304" fill="#349AD5" role="img" aria-label="This item only works when running on the client."><path d="M0 201h337v36H0v-36zm0 0zM0 0v188h337V0H0zM218 287h30c12 0 12 17 0 17H88c-11 0-11-17 0-17h31l10-39h79l10 39z"></path></svg> <!-- -->Client</span></span><span class="docTag__6UZ" style="border-color:#218c74;color:#218c74">UI</span><span class="docTag__6UZ" style="border-color:#ff793f;color:#ff793f">Effects</span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/howmanysmall/Hooks/blob/main/src/useStrokeScale.lua#L17"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Hooks<!-- -->.</code><code class="green_DgR4">useStrokeScale</code><code>(</code><div class="inset_uKQm"><div><code>pixelThickness?<!-- -->: </code><code class="blue_P4bS">number</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>The thickness of the stroke in pixels. Defaults to 1.</p>
+</span></span></div><div><code>relativeSize?<!-- -->: </code><code class="blue_P4bS">number</code><span class="inlineDescription_G7Er">-- <span>
+<p>The relative size of the screen. Defaults to 985.</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">Binding</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">number</code><code class="op_lSLc">&gt;</code><span class="inlineDescription_G7Er">-- <span>
+<p>The thickness of the stroke in pixels.</p>
+</span></span></div><div>
+<p>A hook used to scale a stroke size based on the viewport size.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="useSyncExternalStore"><code style="text-decoration:none">useSyncExternalStore</code><a href="#useSyncExternalStore" class="hash-link" aria-label="Direct link to useSyncExternalStore" title="Direct link to useSyncExternalStore">​</a></h3><span class="docTag__6UZ" style="border-color:#79b473;color:#79b473">Polyfill</span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/howmanysmall/Hooks/blob/main/src/useSyncExternalStore.lua#L49"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Hooks<!-- -->.</code><code class="green_DgR4">useSyncExternalStore</code><code>(</code><div class="inset_uKQm"><div><code>subscribe<!-- -->: </code><code class="purple_ieR2">(</code><code>onStoreChange<!-- -->: </code><code class="green_DgR4">(</code><code class="green_DgR4">)</code><code class="green_DgR4"> → </code><code class="green_DgR4">(</code><code class="green_DgR4">)</code><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>A function that subscribes to the external store.</p>
+</span></span></div><div><code>getSnapshot<!-- -->: </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="blue_P4bS">Snapshot</code><span class="inlineDescription_G7Er">-- <span>
+<p>A function that returns the current snapshot of the external store.</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">Snapshot</code><span class="inlineDescription_G7Er">-- <span>
+<p>The current snapshot of the external store.</p>
+</span></span></div><div>
+<p>A polyfill for React 18's <code>useSyncExternalStore</code> hook.</p>
+<div class="admonition admonition-info alert alert--info">
+  <div class="admonition-heading">
+    <h5><span class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16">
+          <path d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path>
+        </svg></span>info</h5>
+  </div>
+  <div class="admonition-content">
+    <p>For more info, check out the <a href="https://github.com/reactwg/react-18/discussions/86" target="_blank">issue</a> on the React 18 Working Group.</p>
+  </div>
+</div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="useTheme"><code style="text-decoration:none">useTheme</code><a href="#useTheme" class="hash-link" aria-label="Direct link to useTheme" title="Direct link to useTheme">​</a></h3><span class="badge_Ba2I" style="color:#f39c12"><span class="badgeTooltip_cWXP">This item only works when running in the context of a plugin.</span><span class="badgeToolTipTail_H9D_"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#f39c12" style="transform:rotate(45deg)" role="img" aria-label="This item only works when running in the context of a plugin."><path d="M74.388 29.812H25.612a2.152 2.152 0 0 0-2.152 2.152v5.315c0 1.188.963 2.152 2.152 2.152h2.87v8.314c0 9.634 6.333 17.792 15.063 20.533v5.052c0 .792.642 1.435 1.434 1.435h1.435v1.436c0 6.703 2.612 13.008 7.354 17.75.698.699 1.617 1.049 2.535 1.049s1.836-.35 2.536-1.051c1.4-1.4 1.4-3.672 0-5.072a17.81 17.81 0 0 1-5.252-12.678v-1.436h1.435c.792 0 1.434-.643 1.434-1.435v-5.052c8.731-2.743 15.063-10.898 15.063-20.533V39.43h2.869a2.152 2.152 0 0 0 2.152-2.152v-5.315a2.152 2.152 0 0 0-2.152-2.151zM41.392 8.586a3.586 3.586 0 0 0-7.173 0v18.649h7.173V8.586zM65.78 8.586a3.586 3.586 0 0 0-7.173 0v18.649h7.173V8.586z"></path></svg> <!-- -->Plugin</span></span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/howmanysmall/Hooks/blob/main/src/useTheme.lua#L16"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Hooks<!-- -->.</code><code class="green_DgR4">useTheme</code><code>(</code><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ThemeData">ThemeData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The current theme.</p>
+</span></span></div><div>
+<p>A hook that returns the current theme. Used for Plugins.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="useUncontrolled"><code style="text-decoration:none">useUncontrolled</code><a href="#useUncontrolled" class="hash-link" aria-label="Direct link to useUncontrolled" title="Direct link to useUncontrolled">​</a></h3><span class="docTag__6UZ" style="border-color:#dc0073;color:#dc0073">State Management</span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/howmanysmall/Hooks/blob/main/src/useUncontrolled.lua#L40"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Hooks<!-- -->.</code><code class="green_DgR4">useUncontrolled</code><code>(</code><div class="inset_uKQm"><div><code>input?<!-- -->: </code><code class="blue_P4bS">IUseUncontrolledInput</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">T</code><code class="op_lSLc">&gt;</code><span class="inlineDescription_G7Er">-- <span>
+<p>The input to use.</p>
+</span></span></div></div><code>) → </code><code>(</code><div class="inset_uKQm"><div><code class="blue_P4bS">T</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>The value to use.</p>
+</span></span></div><div><code class="purple_ieR2">(</code><code>value<!-- -->: </code><code class="blue_P4bS">T</code><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>The onChange handler to use.</p>
+</span></span></div><div><code class="blue_P4bS">boolean</code><span class="inlineDescription_G7Er">-- <span>
+<p>Whether the component is controlled or not.</p>
+</span></span></div></div><code>)</code></div><div>
+<p>Manage state of both controlled and uncontrolled components.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="useViewportSize"><code style="text-decoration:none">useViewportSize</code><a href="#useViewportSize" class="hash-link" aria-label="Direct link to useViewportSize" title="Direct link to useViewportSize">​</a></h3><span class="badge_Ba2I" style="color:#349AD5"><span class="badgeTooltip_cWXP">This item only works when running on the client.</span><span class="badgeToolTipTail_H9D_"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 337 304" fill="#349AD5" role="img" aria-label="This item only works when running on the client."><path d="M0 201h337v36H0v-36zm0 0zM0 0v188h337V0H0zM218 287h30c12 0 12 17 0 17H88c-11 0-11-17 0-17h31l10-39h79l10 39z"></path></svg> <!-- -->Client</span></span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/howmanysmall/Hooks/blob/main/src/useViewportSize.lua#L15"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Hooks<!-- -->.</code><code class="green_DgR4">useViewportSize</code><code>(</code><div class="inset_uKQm"><div><code>onChange?<!-- -->: </code><code class="purple_ieR2">(</code><code>viewportSize<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector2" target="_blank" rel="noopener noreferrer">Vector2<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><span class="inlineDescription_G7Er">-- <span>
+<p>A callback that is called when the viewport size changes.</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">Binding</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector2" target="_blank" rel="noopener noreferrer">Vector2<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="op_lSLc">&gt;</code><span class="inlineDescription_G7Er">-- <span>
+<p>The current viewport size.</p>
+</span></span></div><div>
+<p>A hook that returns the current ViewportSize of the CurrentCamera.</p>
+</div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
+    &quot;functions&quot;: [
+        {
+            &quot;name&quot;: &quot;useClickOutside&quot;,
+            &quot;desc&quot;: &quot;A hook used to detect click and touch events outside of specified element.\n\n### Luau:\n\n```lua\nlocal function Component()\n\tlocal visible, setVisible = React.useBinding(false)\n\tlocal ref = Hooks.useClickOutside(function()\n\t\tsetVisible(false)\n\tend)\n\n\treturn React.createElement(\&quot;Frame\&quot;, {\n\t\tAnchorPoint = Vector2.new(0.5, 0.5),\n\t\tBackgroundColor3 = Color3.fromRGB(255, 255, 255),\n\t\tBorderSizePixel = 0,\n\t\tPosition = UDim2.fromScale(0.5, 0.5),\n\t\tSize = UDim2.fromOffset(100, 100),\n\t\tVisible = visible,\n\n\t\tref = ref,\n\t})\nend\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;onClick&quot;,
+                    &quot;desc&quot;: &quot;A callback to call when a click or touch event is detected outside of the element.&quot;,
+                    &quot;lua_type&quot;: &quot;() -&gt; ()&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;userInputTypes?&quot;,
+                    &quot;desc&quot;: &quot;A list of user input types to detect. Defaults to `Enum.UserInputType.MouseButton1` and `Enum.UserInputType.Touch`.&quot;,
+                    &quot;lua_type&quot;: &quot;{Enum.UserInputType}&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;guiObjects?&quot;,
+                    &quot;desc&quot;: &quot;A list of elements to detect clicks outside of. Defaults to the element returned by `useRef`.&quot;,
+                    &quot;lua_type&quot;: &quot;{GuiObject}&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;A ref to the element to detect clicks outside of.&quot;,
+                    &quot;lua_type&quot;: &quot;Ref&lt;GuiObject&gt;&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;tags&quot;: [
+                &quot;User Interface&quot;
+            ],
+            &quot;realm&quot;: [
+                &quot;Client&quot;
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 55,
+                &quot;path&quot;: &quot;src/useClickOutside.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;useCurrentCamera&quot;,
+            &quot;desc&quot;: &quot;A hook used for getting the current camera.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;onChange?&quot;,
+                    &quot;desc&quot;: &quot;A callback that is called when the current camera changes.&quot;,
+                    &quot;lua_type&quot;: &quot;(currentCamera: Camera) -&gt; ()&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The current camera.&quot;,
+                    &quot;lua_type&quot;: &quot;Camera&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;realm&quot;: [
+                &quot;Client&quot;
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 16,
+                &quot;path&quot;: &quot;src/useCurrentCamera.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;useDelayedValue&quot;,
+            &quot;desc&quot;: &quot;A hook used for delaying a value.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;value&quot;,
+                    &quot;desc&quot;: &quot;The value to delay.&quot;,
+                    &quot;lua_type&quot;: &quot;T&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;delayInSeconds&quot;,
+                    &quot;desc&quot;: &quot;The amount of time to delay the value by.&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The delayed value.&quot;,
+                    &quot;lua_type&quot;: &quot;T&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;tags&quot;: [
+                &quot;State Management&quot;
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 31,
+                &quot;path&quot;: &quot;src/useDelayedValue.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;useExternalEvent&quot;,
+            &quot;desc&quot;: &quot;A hook that connects and disconnects a callback to an event. This is really\njust a fancy `useEffect` wrapper.\n\n### Luau:\n\n```lua\nlocal function Component()\nend\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;event&quot;,
+                    &quot;desc&quot;: &quot;The event to connect to.&quot;,
+                    &quot;lua_type&quot;: &quot;RBXScriptSignal&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;callback&quot;,
+                    &quot;desc&quot;: &quot;The callback to connect to the event.&quot;,
+                    &quot;lua_type&quot;: &quot;(...any) -&gt; ()&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;tags&quot;: [
+                &quot;Lifecycle&quot;
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 22,
+                &quot;path&quot;: &quot;src/useExternalEvent.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;useForceUpdate&quot;,
+            &quot;desc&quot;: &quot;A hook that creates a function used to force a component to re-render.&quot;,
+            &quot;params&quot;: [],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The function to call to force a re-render.&quot;,
+                    &quot;lua_type&quot;: &quot;() -&gt; ()&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;tags&quot;: [
+                &quot;Lifecycle&quot;
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 16,
+                &quot;path&quot;: &quot;src/useForceUpdate.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;useId&quot;,
+            &quot;desc&quot;: &quot;The `useId` hook generates random id that persists across renders. Hook is usually used to bind input elements to labels. Generated random id is saved to ref and will not change unless component is unmounted.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;staticId?&quot;,
+                    &quot;desc&quot;: &quot;A static id to use instead of a generated one.&quot;,
+                    &quot;lua_type&quot;: &quot;string&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The generated id.&quot;,
+                    &quot;lua_type&quot;: &quot;string&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;tags&quot;: [
+                &quot;State Management&quot;
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 14,
+                &quot;path&quot;: &quot;src/useId.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;useMemoWithCleanup&quot;,
+            &quot;desc&quot;: &quot;A hook that memoizes a value and cleans it up when the dependencies change.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;createValue&quot;,
+                    &quot;desc&quot;: &quot;The function to create the value.&quot;,
+                    &quot;lua_type&quot;: &quot;() -&gt; T&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;cleanupValue&quot;,
+                    &quot;desc&quot;: &quot;The function to clean up the value.&quot;,
+                    &quot;lua_type&quot;: &quot;(value: T) -&gt; ()&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;dependencies?&quot;,
+                    &quot;desc&quot;: &quot;The dependencies to check for changes.&quot;,
+                    &quot;lua_type&quot;: &quot;{unknown}&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The memoized value.&quot;,
+                    &quot;lua_type&quot;: &quot;T&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;tags&quot;: [
+                &quot;State Management&quot;
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 20,
+                &quot;path&quot;: &quot;src/useMemoWithCleanup.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;usePrevious&quot;,
+            &quot;desc&quot;: &quot;The `usePrevious` hook stores the previous value of a state in a ref, it returns undefined on initial render and the previous value of a state after rerender.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;value&quot;,
+                    &quot;desc&quot;: &quot;The value to store.&quot;,
+                    &quot;lua_type&quot;: &quot;T&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The previous value of the state.&quot;,
+                    &quot;lua_type&quot;: &quot;T?&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;tags&quot;: [
+                &quot;State Management&quot;
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 14,
+                &quot;path&quot;: &quot;src/usePrevious.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;useRainbowColorSequence&quot;,
+            &quot;desc&quot;: &quot;An example hook that uses a rainbow color sequence.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;parameters?&quot;,
+                    &quot;desc&quot;: &quot;The parameters for the hook.&quot;,
+                    &quot;lua_type&quot;: &quot;IParameters&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The rainbow color sequence.&quot;,
+                    &quot;lua_type&quot;: &quot;Binding&lt;ColorSequence&gt;&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;tags&quot;: [
+                &quot;UI&quot;,
+                &quot;Effects&quot;
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 42,
+                &quot;path&quot;: &quot;src/useRainbowColorSequence.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;useRendersSpy&quot;,
+            &quot;desc&quot;: &quot;Returns the amount of times the component has been rendered since mounting. This is a very useful hook for testing.&quot;,
+            &quot;params&quot;: [],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The amount of renders.&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;tags&quot;: [
+                &quot;Lifecycle&quot;,
+                &quot;Debugging&quot;
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 13,
+                &quot;path&quot;: &quot;src/useRendersSpy.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;useScale&quot;,
+            &quot;desc&quot;: &quot;A hook used for scaling UI elements to fit the current screen.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;scale&quot;,
+                    &quot;desc&quot;: &quot;The scale to use for the UI element.&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;goalSize&quot;,
+                    &quot;desc&quot;: &quot;The size of the UI element. Recommended to use Vector3 as it is faster.&quot;,
+                    &quot;lua_type&quot;: &quot;Vector2 | Vector3&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The scale to use for the UI element.&quot;,
+                    &quot;lua_type&quot;: &quot;Binding&lt;number&gt;&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;tags&quot;: [
+                &quot;UI&quot;
+            ],
+            &quot;realm&quot;: [
+                &quot;Client&quot;
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 18,
+                &quot;path&quot;: &quot;src/useScale.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;useShallowEffect&quot;,
+            &quot;desc&quot;: &quot;`useEffect` drop in replacement with dependencies shallow comparison. `useShallowEffect` works\nexactly like `useEffect` but performs shallow dependencies comparison instead of referential comparison.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;callback&quot;,
+                    &quot;desc&quot;: &quot;The callback to run when the dependencies change.&quot;,
+                    &quot;lua_type&quot;: &quot;() -&gt; ()&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;dependencies?&quot;,
+                    &quot;desc&quot;: &quot;The dependencies to compare.&quot;,
+                    &quot;lua_type&quot;: &quot;{unknown}&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;tags&quot;: [
+                &quot;Lifecycle&quot;
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 52,
+                &quot;path&quot;: &quot;src/useShallowEffect.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;useStrokeScale&quot;,
+            &quot;desc&quot;: &quot;A hook used to scale a stroke size based on the viewport size.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;pixelThickness?&quot;,
+                    &quot;desc&quot;: &quot;The thickness of the stroke in pixels. Defaults to 1.&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;relativeSize?&quot;,
+                    &quot;desc&quot;: &quot;The relative size of the screen. Defaults to 985.&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The thickness of the stroke in pixels.&quot;,
+                    &quot;lua_type&quot;: &quot;Binding&lt;number&gt;&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;tags&quot;: [
+                &quot;UI&quot;,
+                &quot;Effects&quot;
+            ],
+            &quot;realm&quot;: [
+                &quot;Client&quot;
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 17,
+                &quot;path&quot;: &quot;src/useStrokeScale.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;useSyncExternalStore&quot;,
+            &quot;desc&quot;: &quot;A polyfill for React 18&#x27;s `useSyncExternalStore` hook.\n\n:::info\nFor more info, check out the [issue](https://github.com/reactwg/react-18/discussions/86) on the React 18 Working Group.\n:::&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;subscribe&quot;,
+                    &quot;desc&quot;: &quot;A function that subscribes to the external store.&quot;,
+                    &quot;lua_type&quot;: &quot;(onStoreChange: () -&gt; ()) -&gt; () -&gt; ()&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;getSnapshot&quot;,
+                    &quot;desc&quot;: &quot;A function that returns the current snapshot of the external store.&quot;,
+                    &quot;lua_type&quot;: &quot;() -&gt; Snapshot&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The current snapshot of the external store.&quot;,
+                    &quot;lua_type&quot;: &quot;Snapshot&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;tags&quot;: [
+                &quot;Polyfill&quot;
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 49,
+                &quot;path&quot;: &quot;src/useSyncExternalStore.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;useTheme&quot;,
+            &quot;desc&quot;: &quot;A hook that returns the current theme. Used for Plugins.&quot;,
+            &quot;params&quot;: [],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The current theme.&quot;,
+                    &quot;lua_type&quot;: &quot;ThemeData&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;realm&quot;: [
+                &quot;Plugin&quot;
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 16,
+                &quot;path&quot;: &quot;src/useTheme.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;useUncontrolled&quot;,
+            &quot;desc&quot;: &quot;Manage state of both controlled and uncontrolled components.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;input?&quot;,
+                    &quot;desc&quot;: &quot;The input to use.&quot;,
+                    &quot;lua_type&quot;: &quot;IUseUncontrolledInput&lt;T&gt;&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The value to use.&quot;,
+                    &quot;lua_type&quot;: &quot;T&quot;
+                },
+                {
+                    &quot;desc&quot;: &quot;The onChange handler to use.&quot;,
+                    &quot;lua_type&quot;: &quot;(value: T) -&gt; ()&quot;
+                },
+                {
+                    &quot;desc&quot;: &quot;Whether the component is controlled or not.&quot;,
+                    &quot;lua_type&quot;: &quot;boolean&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;tags&quot;: [
+                &quot;State Management&quot;
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 40,
+                &quot;path&quot;: &quot;src/useUncontrolled.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;useViewportSize&quot;,
+            &quot;desc&quot;: &quot;A hook that returns the current ViewportSize of the CurrentCamera.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;onChange?&quot;,
+                    &quot;desc&quot;: &quot;A callback that is called when the viewport size changes.&quot;,
+                    &quot;lua_type&quot;: &quot;(viewportSize: Vector2) -&gt; ()&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The current viewport size.&quot;,
+                    &quot;lua_type&quot;: &quot;Binding&lt;Vector2&gt;&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;realm&quot;: [
+                &quot;Client&quot;
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 15,
+                &quot;path&quot;: &quot;src/useViewportSize.lua&quot;
+            }
+        }
+    ],
+    &quot;properties&quot;: [],
+    &quot;types&quot;: [],
+    &quot;name&quot;: &quot;Hooks&quot;,
+    &quot;desc&quot;: &quot;A collection of hooks made for React.&quot;,
+    &quot;source&quot;: {
+        &quot;line&quot;: 33,
+        &quot;path&quot;: &quot;src/init.lua&quot;
+    }
+}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#useClickOutside" class="table-of-contents__link toc-highlight">.useClickOutside</a></li><li><a href="#useCurrentCamera" class="table-of-contents__link toc-highlight">.useCurrentCamera</a></li><li><a href="#useDelayedValue" class="table-of-contents__link toc-highlight">.useDelayedValue</a></li><li><a href="#useExternalEvent" class="table-of-contents__link toc-highlight">.useExternalEvent</a></li><li><a href="#useForceUpdate" class="table-of-contents__link toc-highlight">.useForceUpdate</a></li><li><a href="#useId" class="table-of-contents__link toc-highlight">.useId</a></li><li><a href="#useMemoWithCleanup" class="table-of-contents__link toc-highlight">.useMemoWithCleanup</a></li><li><a href="#usePrevious" class="table-of-contents__link toc-highlight">.usePrevious</a></li><li><a href="#useRainbowColorSequence" class="table-of-contents__link toc-highlight">.useRainbowColorSequence</a></li><li><a href="#useRendersSpy" class="table-of-contents__link toc-highlight">.useRendersSpy</a></li><li><a href="#useScale" class="table-of-contents__link toc-highlight">.useScale</a></li><li><a href="#useShallowEffect" class="table-of-contents__link toc-highlight">.useShallowEffect</a></li><li><a href="#useStrokeScale" class="table-of-contents__link toc-highlight">.useStrokeScale</a></li><li><a href="#useSyncExternalStore" class="table-of-contents__link toc-highlight">.useSyncExternalStore</a></li><li><a href="#useTheme" class="table-of-contents__link toc-highlight">.useTheme</a></li><li><a href="#useUncontrolled" class="table-of-contents__link toc-highlight">.useUncontrolled</a></li><li><a href="#useViewportSize" class="table-of-contents__link toc-highlight">.useViewportSize</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2023 howmanysmall. Built with Moonwave and Docusaurus.</div></div></div></footer></div>
+<script src="/Hooks/assets/js/runtime~main.7bff0ade.js"></script>
+<script src="/Hooks/assets/js/main.1af443d0.js"></script>
+</body>
+</html>

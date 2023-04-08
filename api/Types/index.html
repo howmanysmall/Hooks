@@ -1,0 +1,993 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="plugin-moonwave plugin-id-moonwave">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v2.3.1">
+<title data-rh="true">Types | Hooks</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://howmanysmall.github.io/Hooks/api/Types"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" property="og:title" content="Types | Hooks"><meta data-rh="true" name="description" content="The extra types for the hooks."><meta data-rh="true" property="og:description" content="The extra types for the hooks."><link data-rh="true" rel="canonical" href="https://howmanysmall.github.io/Hooks/api/Types"><link data-rh="true" rel="alternate" href="https://howmanysmall.github.io/Hooks/api/Types" hreflang="en"><link data-rh="true" rel="alternate" href="https://howmanysmall.github.io/Hooks/api/Types" hreflang="x-default"><link rel="stylesheet" href="/Hooks/assets/css/styles.9b3dbd17.css">
+<link rel="preload" href="/Hooks/assets/js/runtime~main.7bff0ade.js" as="script">
+<link rel="preload" href="/Hooks/assets/js/main.1af443d0.js" as="script">
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
+<div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/Hooks/"><b class="navbar__title text--truncate">Hooks</b></a><a class="navbar__item navbar__link" href="/Hooks/docs/intro">Docs</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/Hooks/api/">API</a><a class="navbar__item navbar__link" href="/Hooks/changelog">Changelog</a></div><div class="navbar__items navbar__items--right"><a href="https://discord.gg/nhDpg96Srt" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Discord<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><a href="https://github.com/howmanysmall/Hooks" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="searchBox_ZlJk"><div class="navbar__search"><span aria-label="expand searchbar" role="button" class="search-icon" tabindex="0"></span><input type="search" id="search_input_react" placeholder="Press S to Search..." aria-label="Search" class="navbar__search-input search-bar"></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0 docPageContainer_wNNk"><div class="docPage_Dpn1"><div class="docSidebarContainer_o_re"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/Hooks/api/Hooks">​Hooks</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/Hooks/api/Types">​Types</a></li></ul></nav></div></div><main class="docMainContainer_HJE1"><div class="container padding-vert--lg"><div class="row"><div class="col docItemCol_MU3C"><div class="docItemContainer_Wv98"><article><div class="member_J0w1 markdown"><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_oUs_"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><header><h1 class="docTitle_mZRt" style="text-decoration:none"><span style="display:inline-block">Types</span></h1><div class="luaClassTags_EipM"></div><div>
+<p>The extra types for the hooks.</p>
+</div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="types">Types<a href="#types" class="hash-link" aria-label="Direct link to Types" title="Direct link to Types">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="IRainbowColorSequenceParameters"><code style="text-decoration:none">IRainbowColorSequenceParameters</code><a href="#IRainbowColorSequenceParameters" class="hash-link" aria-label="Direct link to IRainbowColorSequenceParameters" title="Direct link to IRainbowColorSequenceParameters">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/howmanysmall/Hooks/blob/main/src/useRainbowColorSequence.lua#L19"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code class="purple_ieR2">interface</code> <code>IRainbowColorSequenceParameters<!-- --> <!-- -->{</code><div class="inset_uKQm"><div><code>Event?<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/RBXScriptSignal" target="_blank" rel="noopener noreferrer">RBXScriptSignal<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The event to connect to. Defaults to <a href="https://developer.roblox.com/en-us/api-reference/class/RunService#Heartbeat" target="_blank">RunService.Heartbeat</a>.</p>
+</span></span></div><div><code>IsPerformanceMode?<!-- -->: </code><code class="blue_P4bS">boolean</code><span class="inlineDescription_G7Er">-- <span>
+<p>Whether or not the hook should be in performance mode. Performance mode disables the effect entirely. Defaults to <code>false</code>.</p>
+</span></span></div><div><code>Visible?<!-- -->: </code><code class="blue_P4bS">boolean</code><span class="inlineDescription_G7Er">-- <span>
+<p>Whether or not the hook should be visible. Defaults to <code>true</code>.</p>
+</span></span></div></div><code>}</code></div><div></div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="IUseUncontrolledInput&lt;T&gt;"><code style="text-decoration:none">IUseUncontrolledInput&lt;T&gt;</code><a href="#IUseUncontrolledInput&lt;T&gt;" class="hash-link" aria-label="Direct link to IUseUncontrolledInput&lt;T&gt;" title="Direct link to IUseUncontrolledInput&lt;T&gt;">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/howmanysmall/Hooks/blob/main/src/useUncontrolled.lua#L16"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code class="purple_ieR2">interface</code> <code>IUseUncontrolledInput&lt;T&gt;<!-- --> <!-- -->{</code><div class="inset_uKQm"><div><code>DefaultValue?<!-- -->: </code><code class="blue_P4bS">T</code><span class="inlineDescription_G7Er">-- <span>
+<p>Initial value for uncontrolled state.</p>
+</span></span></div><div><code>FinalValue?<!-- -->: </code><code class="blue_P4bS">T</code><span class="inlineDescription_G7Er">-- <span>
+<p>Final value for uncontrolled state when Value and DefaultValue are not provided.</p>
+</span></span></div><div><code>OnChange?<!-- -->: </code><code class="purple_ieR2">(</code><code>value<!-- -->: </code><code class="blue_P4bS">T</code><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><span class="inlineDescription_G7Er">-- <span>
+<p>Controlled state onChange handler.</p>
+</span></span></div><div><code>Value?<!-- -->: </code><code class="blue_P4bS">T</code><span class="inlineDescription_G7Er">-- <span>
+<p>Value for controlled state.</p>
+</span></span></div></div><code>}</code></div><div></div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="ColorData"><code style="text-decoration:none">ColorData</code><a href="#ColorData" class="hash-link" aria-label="Direct link to ColorData" title="Direct link to ColorData">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/howmanysmall/Hooks/blob/main/src/Utility/Types.lua#L13"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code class="purple_ieR2">interface</code> <code>ColorData<!-- --> <!-- -->{</code><div class="inset_uKQm"><div><code>Default<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Color3" target="_blank" rel="noopener noreferrer">Color3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideModifier.Default</code> Color3.</p>
+</span></span></div><div><code>Disabled<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Color3" target="_blank" rel="noopener noreferrer">Color3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideModifier.Disabled</code> Color3.</p>
+</span></span></div><div><code>Hover<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Color3" target="_blank" rel="noopener noreferrer">Color3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideModifier.Hover</code> Color3.</p>
+</span></span></div><div><code>Pressed<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Color3" target="_blank" rel="noopener noreferrer">Color3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideModifier.Pressed</code> Color3.</p>
+</span></span></div><div><code>Selected<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Color3" target="_blank" rel="noopener noreferrer">Color3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideModifier.Selected</code> Color3.</p>
+</span></span></div></div><code>}</code></div><div></div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="ThemeData"><code style="text-decoration:none">ThemeData</code><a href="#ThemeData" class="hash-link" aria-label="Direct link to ThemeData" title="Direct link to ThemeData">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/howmanysmall/Hooks/blob/main/src/Utility/Types.lua#L145"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code class="purple_ieR2">interface</code> <code>ThemeData<!-- --> <!-- -->{</code><div class="inset_uKQm"><div><code>ThemeName<!-- -->: </code><code class="blue_P4bS">&quot;Dark&quot;</code><code class="op_lSLc"> | </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Light" target="_blank" rel="noopener noreferrer">&quot;Light&quot;<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The name of the current theme.</p>
+</span></span></div><div><code>GetColor<!-- -->: </code><code class="purple_ieR2">(</code><div class="inset_uKQm"><code>StudioStyleGuideColor<!-- -->: </code><code class="blue_P4bS">Enum.StudioStyleGuideColor</code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code>StudioStyleGuideModifier?<!-- -->: </code><code class="blue_P4bS">Enum.StudioStyleGuideModifier</code></div><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Color3" target="_blank" rel="noopener noreferrer">Color3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_G7Er">-- <span>
+<p>A function that returns a Color3 based on the given <code>Enum.StudioStyleGuideColor</code> and <code>Enum.StudioStyleGuideModifier</code>.</p>
+</span></span></div><div><code>AttributeCog<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.AttributeCog</code> theme entry.</p>
+</span></span></div><div><code>Border<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.Border</code> theme entry.</p>
+</span></span></div><div><code>BrightText<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.BrightText</code> theme entry.</p>
+</span></span></div><div><code>Button<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.Button</code> theme entry.</p>
+</span></span></div><div><code>ButtonBorder<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ButtonBorder</code> theme entry.</p>
+</span></span></div><div><code>ButtonText<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ButtonText</code> theme entry.</p>
+</span></span></div><div><code>CategoryItem<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.CategoryItem</code> theme entry.</p>
+</span></span></div><div><code>ChatIncomingBgColor<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ChatIncomingBgColor</code> theme entry.</p>
+</span></span></div><div><code>ChatIncomingTextColor<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ChatIncomingTextColor</code> theme entry.</p>
+</span></span></div><div><code>ChatModeratedMessageColor<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ChatModeratedMessageColor</code> theme entry.</p>
+</span></span></div><div><code>ChatOutgoingBgColor<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ChatOutgoingBgColor</code> theme entry.</p>
+</span></span></div><div><code>ChatOutgoingTextColor<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ChatOutgoingTextColor</code> theme entry.</p>
+</span></span></div><div><code>CheckedFieldBackground<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.CheckedFieldBackground</code> theme entry.</p>
+</span></span></div><div><code>CheckedFieldBorder<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.CheckedFieldBorder</code> theme entry.</p>
+</span></span></div><div><code>CheckedFieldIndicator<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.CheckedFieldIndicator</code> theme entry.</p>
+</span></span></div><div><code>ColorPickerFrame<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ColorPickerFrame</code> theme entry.</p>
+</span></span></div><div><code>CurrentMarker<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.CurrentMarker</code> theme entry.</p>
+</span></span></div><div><code>Dark<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.Dark</code> theme entry.</p>
+</span></span></div><div><code>DebuggerCurrentLine<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.DebuggerCurrentLine</code> theme entry.</p>
+</span></span></div><div><code>DebuggerErrorLine<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.DebuggerErrorLine</code> theme entry.</p>
+</span></span></div><div><code>DialogButton<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.DialogButton</code> theme entry.</p>
+</span></span></div><div><code>DialogButtonBorder<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.DialogButtonBorder</code> theme entry.</p>
+</span></span></div><div><code>DialogButtonText<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.DialogButtonText</code> theme entry.</p>
+</span></span></div><div><code>DialogMainButton<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.DialogMainButton</code> theme entry.</p>
+</span></span></div><div><code>DialogMainButtonText<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.DialogMainButtonText</code> theme entry.</p>
+</span></span></div><div><code>DiffFilePathBackground<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.DiffFilePathBackground</code> theme entry.</p>
+</span></span></div><div><code>DiffFilePathBorder<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.DiffFilePathBorder</code> theme entry.</p>
+</span></span></div><div><code>DiffFilePathText<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.DiffFilePathText</code> theme entry.</p>
+</span></span></div><div><code>DiffLineNum<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.DiffLineNum</code> theme entry.</p>
+</span></span></div><div><code>DiffLineNumAdditionBackground<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.DiffLineNumAdditionBackground</code> theme entry.</p>
+</span></span></div><div><code>DiffLineNumDeletionBackground<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.DiffLineNumDeletionBackground</code> theme entry.</p>
+</span></span></div><div><code>DiffLineNumNoChangeBackground<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.DiffLineNumNoChangeBackground</code> theme entry.</p>
+</span></span></div><div><code>DiffLineNumSeparatorBackground<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.DiffLineNumSeparatorBackground</code> theme entry.</p>
+</span></span></div><div><code>DiffTextAddition<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.DiffTextAddition</code> theme entry.</p>
+</span></span></div><div><code>DiffTextAdditionBackground<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.DiffTextAdditionBackground</code> theme entry.</p>
+</span></span></div><div><code>DiffTextDeletion<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.DiffTextDeletion</code> theme entry.</p>
+</span></span></div><div><code>DiffTextDeletionBackground<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.DiffTextDeletionBackground</code> theme entry.</p>
+</span></span></div><div><code>DiffTextHunkInfo<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.DiffTextHunkInfo</code> theme entry.</p>
+</span></span></div><div><code>DiffTextNoChange<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.DiffTextNoChange</code> theme entry.</p>
+</span></span></div><div><code>DiffTextNoChangeBackground<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.DiffTextNoChangeBackground</code> theme entry.</p>
+</span></span></div><div><code>DiffTextSeparatorBackground<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.DiffTextSeparatorBackground</code> theme entry.</p>
+</span></span></div><div><code>DimmedText<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.DimmedText</code> theme entry.</p>
+</span></span></div><div><code>DocViewCodeBackground<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.DocViewCodeBackground</code> theme entry.</p>
+</span></span></div><div><code>Dropdown<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.Dropdown</code> theme entry.</p>
+</span></span></div><div><code>DropShadow<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.DropShadow</code> theme entry.</p>
+</span></span></div><div><code>EmulatorBar<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.EmulatorBar</code> theme entry.</p>
+</span></span></div><div><code>EmulatorDropDown<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.EmulatorDropDown</code> theme entry.</p>
+</span></span></div><div><code>ErrorText<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ErrorText</code> theme entry.</p>
+</span></span></div><div><code>FilterButtonAccent<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.FilterButtonAccent</code> theme entry.</p>
+</span></span></div><div><code>FilterButtonBorder<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.FilterButtonBorder</code> theme entry.</p>
+</span></span></div><div><code>FilterButtonBorderAlt<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.FilterButtonBorderAlt</code> theme entry.</p>
+</span></span></div><div><code>FilterButtonChecked<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.FilterButtonChecked</code> theme entry.</p>
+</span></span></div><div><code>FilterButtonDefault<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.FilterButtonDefault</code> theme entry.</p>
+</span></span></div><div><code>FilterButtonHover<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.FilterButtonHover</code> theme entry.</p>
+</span></span></div><div><code>GameSettingsTableItem<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.GameSettingsTableItem</code> theme entry.</p>
+</span></span></div><div><code>GameSettingsTooltip<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.GameSettingsTooltip</code> theme entry.</p>
+</span></span></div><div><code>HeaderSection<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.HeaderSection</code> theme entry.</p>
+</span></span></div><div><code>InfoBarWarningBackground<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.InfoBarWarningBackground</code> theme entry.</p>
+</span></span></div><div><code>InfoBarWarningText<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.InfoBarWarningText</code> theme entry.</p>
+</span></span></div><div><code>InfoText<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.InfoText</code> theme entry.</p>
+</span></span></div><div><code>InputFieldBackground<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.InputFieldBackground</code> theme entry.</p>
+</span></span></div><div><code>InputFieldBorder<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.InputFieldBorder</code> theme entry.</p>
+</span></span></div><div><code>Item<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.Item</code> theme entry.</p>
+</span></span></div><div><code>Light<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.Light</code> theme entry.</p>
+</span></span></div><div><code>LinkText<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.LinkText</code> theme entry.</p>
+</span></span></div><div><code>MainBackground<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.MainBackground</code> theme entry.</p>
+</span></span></div><div><code>MainButton<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.MainButton</code> theme entry.</p>
+</span></span></div><div><code>MainText<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.MainText</code> theme entry.</p>
+</span></span></div><div><code>Mid<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.Mid</code> theme entry.</p>
+</span></span></div><div><code>Midlight<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.Midlight</code> theme entry.</p>
+</span></span></div><div><code>Notification<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.Notification</code> theme entry.</p>
+</span></span></div><div><code>RibbonButton<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.RibbonButton</code> theme entry.</p>
+</span></span></div><div><code>RibbonTab<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.RibbonTab</code> theme entry.</p>
+</span></span></div><div><code>RibbonTabTopBar<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.RibbonTabTopBar</code> theme entry.</p>
+</span></span></div><div><code>ScriptBackground<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ScriptBackground</code> theme entry.</p>
+</span></span></div><div><code>ScriptBool<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ScriptBool</code> theme entry.</p>
+</span></span></div><div><code>ScriptBracket<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ScriptBracket</code> theme entry.</p>
+</span></span></div><div><code>ScriptBuiltInFunction<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ScriptBuiltInFunction</code> theme entry.</p>
+</span></span></div><div><code>ScriptComment<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ScriptComment</code> theme entry.</p>
+</span></span></div><div><code>ScriptEditorCurrentLine<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ScriptEditorCurrentLine</code> theme entry.</p>
+</span></span></div><div><code>ScriptError<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ScriptError</code> theme entry.</p>
+</span></span></div><div><code>ScriptFindSelectionBackground<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ScriptFindSelectionBackground</code> theme entry.</p>
+</span></span></div><div><code>ScriptFunction<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ScriptFunction</code> theme entry.</p>
+</span></span></div><div><code>ScriptFunctionName<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ScriptFunctionName</code> theme entry.</p>
+</span></span></div><div><code>ScriptKeyword<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ScriptKeyword</code> theme entry.</p>
+</span></span></div><div><code>ScriptLocal<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ScriptLocal</code> theme entry.</p>
+</span></span></div><div><code>ScriptLuauKeyword<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ScriptLuauKeyword</code> theme entry.</p>
+</span></span></div><div><code>ScriptMatchingWordSelectionBackground<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ScriptMatchingWordSelectionBackground</code> theme entry.</p>
+</span></span></div><div><code>ScriptMethod<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ScriptMethod</code> theme entry.</p>
+</span></span></div><div><code>ScriptNil<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ScriptNil</code> theme entry.</p>
+</span></span></div><div><code>ScriptNumber<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ScriptNumber</code> theme entry.</p>
+</span></span></div><div><code>ScriptOperator<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ScriptOperator</code> theme entry.</p>
+</span></span></div><div><code>ScriptProperty<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ScriptProperty</code> theme entry.</p>
+</span></span></div><div><code>ScriptRuler<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ScriptRuler</code> theme entry.</p>
+</span></span></div><div><code>ScriptSelectionBackground<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ScriptSelectionBackground</code> theme entry.</p>
+</span></span></div><div><code>ScriptSelectionText<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ScriptSelectionText</code> theme entry.</p>
+</span></span></div><div><code>ScriptSelf<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ScriptSelf</code> theme entry.</p>
+</span></span></div><div><code>ScriptSideWidget<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ScriptSideWidget</code> theme entry.</p>
+</span></span></div><div><code>ScriptString<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ScriptString</code> theme entry.</p>
+</span></span></div><div><code>ScriptText<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ScriptText</code> theme entry.</p>
+</span></span></div><div><code>ScriptTodo<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ScriptTodo</code> theme entry.</p>
+</span></span></div><div><code>ScriptWarning<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ScriptWarning</code> theme entry.</p>
+</span></span></div><div><code>ScriptWhitespace<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ScriptWhitespace</code> theme entry.</p>
+</span></span></div><div><code>ScrollBar<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ScrollBar</code> theme entry.</p>
+</span></span></div><div><code>ScrollBarBackground<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ScrollBarBackground</code> theme entry.</p>
+</span></span></div><div><code>SensitiveText<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.SensitiveText</code> theme entry.</p>
+</span></span></div><div><code>Separator<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.Separator</code> theme entry.</p>
+</span></span></div><div><code>Shadow<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.Shadow</code> theme entry.</p>
+</span></span></div><div><code>StatusBar<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.StatusBar</code> theme entry.</p>
+</span></span></div><div><code>SubText<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.SubText</code> theme entry.</p>
+</span></span></div><div><code>Tab<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.Tab</code> theme entry.</p>
+</span></span></div><div><code>TabBar<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.TabBar</code> theme entry.</p>
+</span></span></div><div><code>TableItem<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.TableItem</code> theme entry.</p>
+</span></span></div><div><code>Titlebar<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.Titlebar</code> theme entry.</p>
+</span></span></div><div><code>TitlebarText<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.TitlebarText</code> theme entry.</p>
+</span></span></div><div><code>Tooltip<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.Tooltip</code> theme entry.</p>
+</span></span></div><div><code>ViewPortBackground<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.ViewPortBackground</code> theme entry.</p>
+</span></span></div><div><code>WarningText<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Hooks/api/Types#ColorData">ColorData</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The <code>Enum.StudioStyleGuideColor.WarningText</code> theme entry.</p>
+</span></span></div></div><code>}</code></div><div></div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
+    &quot;functions&quot;: [],
+    &quot;properties&quot;: [],
+    &quot;types&quot;: [
+        {
+            &quot;name&quot;: &quot;IRainbowColorSequenceParameters&quot;,
+            &quot;desc&quot;: &quot;&quot;,
+            &quot;fields&quot;: [
+                {
+                    &quot;name&quot;: &quot;Event?&quot;,
+                    &quot;lua_type&quot;: &quot;RBXScriptSignal&quot;,
+                    &quot;desc&quot;: &quot;The event to connect to. Defaults to [RunService.Heartbeat].&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;IsPerformanceMode?&quot;,
+                    &quot;lua_type&quot;: &quot;boolean&quot;,
+                    &quot;desc&quot;: &quot;Whether or not the hook should be in performance mode. Performance mode disables the effect entirely. Defaults to `false`.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Visible?&quot;,
+                    &quot;lua_type&quot;: &quot;boolean&quot;,
+                    &quot;desc&quot;: &quot;Whether or not the hook should be visible. Defaults to `true`.&quot;
+                }
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 19,
+                &quot;path&quot;: &quot;src/useRainbowColorSequence.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;IUseUncontrolledInput&lt;T&gt;&quot;,
+            &quot;desc&quot;: &quot;&quot;,
+            &quot;fields&quot;: [
+                {
+                    &quot;name&quot;: &quot;DefaultValue?&quot;,
+                    &quot;lua_type&quot;: &quot;T&quot;,
+                    &quot;desc&quot;: &quot;Initial value for uncontrolled state.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;FinalValue?&quot;,
+                    &quot;lua_type&quot;: &quot;T&quot;,
+                    &quot;desc&quot;: &quot;Final value for uncontrolled state when Value and DefaultValue are not provided.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;OnChange?&quot;,
+                    &quot;lua_type&quot;: &quot;(value: T) -&gt; ()&quot;,
+                    &quot;desc&quot;: &quot;Controlled state onChange handler.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Value?&quot;,
+                    &quot;lua_type&quot;: &quot;T&quot;,
+                    &quot;desc&quot;: &quot;Value for controlled state.&quot;
+                }
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 16,
+                &quot;path&quot;: &quot;src/useUncontrolled.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;ColorData&quot;,
+            &quot;desc&quot;: &quot;&quot;,
+            &quot;fields&quot;: [
+                {
+                    &quot;name&quot;: &quot;Default&quot;,
+                    &quot;lua_type&quot;: &quot;Color3&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideModifier.Default` Color3.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Disabled&quot;,
+                    &quot;lua_type&quot;: &quot;Color3&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideModifier.Disabled` Color3.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Hover&quot;,
+                    &quot;lua_type&quot;: &quot;Color3&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideModifier.Hover` Color3.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Pressed&quot;,
+                    &quot;lua_type&quot;: &quot;Color3&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideModifier.Pressed` Color3.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Selected&quot;,
+                    &quot;lua_type&quot;: &quot;Color3&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideModifier.Selected` Color3.&quot;
+                }
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 13,
+                &quot;path&quot;: &quot;src/Utility/Types.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;ThemeData&quot;,
+            &quot;desc&quot;: &quot;&quot;,
+            &quot;fields&quot;: [
+                {
+                    &quot;name&quot;: &quot;ThemeName&quot;,
+                    &quot;lua_type&quot;: &quot;\&quot;Dark\&quot; | \&quot;Light\&quot;&quot;,
+                    &quot;desc&quot;: &quot;The name of the current theme.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;GetColor&quot;,
+                    &quot;lua_type&quot;: &quot;(StudioStyleGuideColor: Enum.StudioStyleGuideColor, StudioStyleGuideModifier?: Enum.StudioStyleGuideModifier) -&gt; Color3&quot;,
+                    &quot;desc&quot;: &quot;A function that returns a Color3 based on the given `Enum.StudioStyleGuideColor` and `Enum.StudioStyleGuideModifier`.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;AttributeCog&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.AttributeCog` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Border&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.Border` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;BrightText&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.BrightText` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Button&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.Button` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ButtonBorder&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ButtonBorder` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ButtonText&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ButtonText` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;CategoryItem&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.CategoryItem` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ChatIncomingBgColor&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ChatIncomingBgColor` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ChatIncomingTextColor&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ChatIncomingTextColor` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ChatModeratedMessageColor&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ChatModeratedMessageColor` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ChatOutgoingBgColor&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ChatOutgoingBgColor` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ChatOutgoingTextColor&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ChatOutgoingTextColor` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;CheckedFieldBackground&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.CheckedFieldBackground` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;CheckedFieldBorder&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.CheckedFieldBorder` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;CheckedFieldIndicator&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.CheckedFieldIndicator` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ColorPickerFrame&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ColorPickerFrame` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;CurrentMarker&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.CurrentMarker` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Dark&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.Dark` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;DebuggerCurrentLine&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.DebuggerCurrentLine` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;DebuggerErrorLine&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.DebuggerErrorLine` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;DialogButton&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.DialogButton` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;DialogButtonBorder&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.DialogButtonBorder` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;DialogButtonText&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.DialogButtonText` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;DialogMainButton&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.DialogMainButton` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;DialogMainButtonText&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.DialogMainButtonText` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;DiffFilePathBackground&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.DiffFilePathBackground` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;DiffFilePathBorder&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.DiffFilePathBorder` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;DiffFilePathText&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.DiffFilePathText` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;DiffLineNum&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.DiffLineNum` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;DiffLineNumAdditionBackground&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.DiffLineNumAdditionBackground` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;DiffLineNumDeletionBackground&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.DiffLineNumDeletionBackground` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;DiffLineNumNoChangeBackground&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.DiffLineNumNoChangeBackground` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;DiffLineNumSeparatorBackground&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.DiffLineNumSeparatorBackground` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;DiffTextAddition&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.DiffTextAddition` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;DiffTextAdditionBackground&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.DiffTextAdditionBackground` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;DiffTextDeletion&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.DiffTextDeletion` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;DiffTextDeletionBackground&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.DiffTextDeletionBackground` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;DiffTextHunkInfo&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.DiffTextHunkInfo` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;DiffTextNoChange&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.DiffTextNoChange` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;DiffTextNoChangeBackground&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.DiffTextNoChangeBackground` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;DiffTextSeparatorBackground&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.DiffTextSeparatorBackground` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;DimmedText&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.DimmedText` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;DocViewCodeBackground&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.DocViewCodeBackground` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Dropdown&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.Dropdown` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;DropShadow&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.DropShadow` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;EmulatorBar&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.EmulatorBar` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;EmulatorDropDown&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.EmulatorDropDown` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ErrorText&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ErrorText` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;FilterButtonAccent&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.FilterButtonAccent` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;FilterButtonBorder&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.FilterButtonBorder` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;FilterButtonBorderAlt&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.FilterButtonBorderAlt` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;FilterButtonChecked&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.FilterButtonChecked` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;FilterButtonDefault&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.FilterButtonDefault` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;FilterButtonHover&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.FilterButtonHover` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;GameSettingsTableItem&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.GameSettingsTableItem` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;GameSettingsTooltip&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.GameSettingsTooltip` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;HeaderSection&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.HeaderSection` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;InfoBarWarningBackground&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.InfoBarWarningBackground` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;InfoBarWarningText&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.InfoBarWarningText` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;InfoText&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.InfoText` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;InputFieldBackground&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.InputFieldBackground` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;InputFieldBorder&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.InputFieldBorder` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Item&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.Item` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Light&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.Light` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;LinkText&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.LinkText` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;MainBackground&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.MainBackground` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;MainButton&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.MainButton` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;MainText&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.MainText` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Mid&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.Mid` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Midlight&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.Midlight` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Notification&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.Notification` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;RibbonButton&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.RibbonButton` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;RibbonTab&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.RibbonTab` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;RibbonTabTopBar&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.RibbonTabTopBar` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ScriptBackground&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ScriptBackground` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ScriptBool&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ScriptBool` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ScriptBracket&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ScriptBracket` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ScriptBuiltInFunction&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ScriptBuiltInFunction` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ScriptComment&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ScriptComment` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ScriptEditorCurrentLine&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ScriptEditorCurrentLine` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ScriptError&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ScriptError` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ScriptFindSelectionBackground&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ScriptFindSelectionBackground` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ScriptFunction&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ScriptFunction` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ScriptFunctionName&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ScriptFunctionName` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ScriptKeyword&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ScriptKeyword` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ScriptLocal&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ScriptLocal` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ScriptLuauKeyword&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ScriptLuauKeyword` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ScriptMatchingWordSelectionBackground&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ScriptMatchingWordSelectionBackground` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ScriptMethod&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ScriptMethod` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ScriptNil&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ScriptNil` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ScriptNumber&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ScriptNumber` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ScriptOperator&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ScriptOperator` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ScriptProperty&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ScriptProperty` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ScriptRuler&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ScriptRuler` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ScriptSelectionBackground&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ScriptSelectionBackground` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ScriptSelectionText&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ScriptSelectionText` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ScriptSelf&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ScriptSelf` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ScriptSideWidget&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ScriptSideWidget` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ScriptString&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ScriptString` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ScriptText&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ScriptText` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ScriptTodo&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ScriptTodo` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ScriptWarning&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ScriptWarning` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ScriptWhitespace&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ScriptWhitespace` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ScrollBar&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ScrollBar` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ScrollBarBackground&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ScrollBarBackground` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;SensitiveText&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.SensitiveText` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Separator&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.Separator` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Shadow&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.Shadow` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;StatusBar&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.StatusBar` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;SubText&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.SubText` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Tab&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.Tab` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;TabBar&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.TabBar` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;TableItem&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.TableItem` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Titlebar&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.Titlebar` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;TitlebarText&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.TitlebarText` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Tooltip&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.Tooltip` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ViewPortBackground&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.ViewPortBackground` theme entry.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;WarningText&quot;,
+                    &quot;lua_type&quot;: &quot;ColorData&quot;,
+                    &quot;desc&quot;: &quot;The `Enum.StudioStyleGuideColor.WarningText` theme entry.&quot;
+                }
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 145,
+                &quot;path&quot;: &quot;src/Utility/Types.lua&quot;
+            }
+        }
+    ],
+    &quot;name&quot;: &quot;Types&quot;,
+    &quot;desc&quot;: &quot;The extra types for the hooks.&quot;,
+    &quot;source&quot;: {
+        &quot;line&quot;: 28,
+        &quot;path&quot;: &quot;src/init.lua&quot;
+    }
+}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a><ul><li><a href="#ColorData" class="table-of-contents__link toc-highlight">ColorData</a></li><li><a href="#IRainbowColorSequenceParameters" class="table-of-contents__link toc-highlight">IRainbowColorSequenceParameters</a></li><li><a href="#IUseUncontrolledInput&lt;T&gt;" class="table-of-contents__link toc-highlight">IUseUncontrolledInput<t></t></a></li><li><a href="#ThemeData" class="table-of-contents__link toc-highlight">ThemeData</a></li></ul></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2023 howmanysmall. Built with Moonwave and Docusaurus.</div></div></div></footer></div>
+<script src="/Hooks/assets/js/runtime~main.7bff0ade.js"></script>
+<script src="/Hooks/assets/js/main.1af443d0.js"></script>
+</body>
+</html>
