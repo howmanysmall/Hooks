@@ -18,7 +18,7 @@ type UseAsyncState<T> = {
 
 	@tag State Management
 	@within Hooks
-	@param promise Promise<T> | () -> Promise<T> -- The Promise to wrap.
+	@param promiseOrGetPromise Promise<T> | () -> Promise<T> -- The Promise to wrap.
 	@return T? -- The result of the Promise.
 	@return unknown? -- The error message of the Promise.
 	@return Promise.Status -- The status of the Promise.
