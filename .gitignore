@@ -42,3 +42,6 @@ luac.out
 /Packages
 Garbage
 build
+
+wally.lock
+sourcemap.json
