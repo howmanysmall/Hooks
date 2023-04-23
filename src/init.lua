@@ -21,6 +21,7 @@ local useSyncExternalStore = require(script.useSyncExternalStore)
 local useTheme = require(script.useTheme)
 local useUncontrolled = require(script.useUncontrolled)
 local useViewportSize = require(script.useViewportSize)
+local useWhyDidYouUpdate = require(script.useWhyDidYouUpdate)
 
 --[=[
 	The extra types for the hooks.
@@ -52,6 +53,7 @@ local Hooks = {
 	useTheme = useTheme,
 	useUncontrolled = useUncontrolled,
 	useViewportSize = useViewportSize,
+	useWhyDidYouUpdate = useWhyDidYouUpdate,
 }
 
 table.freeze(Hooks)
