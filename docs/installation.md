@@ -11,7 +11,7 @@ sidebar_position: 2
 
 ```toml
 [dependencies]
-Hooks = "howmanysmall/hooks@^1.3.0"
+Hooks = "howmanysmall/hooks@^1.4.0"
 ```
 
 ## Next
