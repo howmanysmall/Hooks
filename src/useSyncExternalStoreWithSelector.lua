@@ -27,6 +27,7 @@ type IInst<Selected> = {
 
 	@tag Polyfill
 	@within Hooks
+
 	@param subscribe (onStoreChange: () -> ()) -> () -> () -- A function that subscribes to the external store.
 	@param getSnapshot () -> Snapshot -- A function that returns the current snapshot of the external store.
 	@param selector (snapshot: Snapshot) -> Selected -- A selector function that is used to select a value from the snapshot.

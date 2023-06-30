@@ -10,6 +10,10 @@ local console = LuauPolyfill.console
 
 --[=[
 	Quickly see which prop changed and caused a re-render by adding a single line to the component.
+
+	@tag Debug
+	@within Hooks
+
 	@param name string -- The name of the component.
 	@param props table -- The props of the component.
 ]=]
