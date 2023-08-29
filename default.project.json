@@ -1,5 +1,6 @@
 {
-	"name": "Hooks",
-	"servePort": 25565,
-	"tree": {"$path": "src"}
+  "name": "project",
+  "tree": {
+    "$className": "DataModel"
+  }
 }

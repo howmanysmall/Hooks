@@ -1,19 +1,36 @@
 [package]
 name = "howmanysmall/hooks"
-version = "1.4.1"
+version = "1.4.2"
 registry = "https://github.com/UpliftGames/wally-index"
 authors = ["HowManySmall"]
 realm = "shared"
 exclude = [
-	"docs", ".moonwave", "test",
-	"Hooks.rbxm", "Hooks.rbxmx", "BuildHooks.lua",
-	"changelog.md", "README.md", ".styluaignore", ".gitignore",
-	"foreman.toml", "Luau.toml", "moonwave.toml", "rotriever.toml", "selene.toml", "stylua.toml", "testez-companion.toml", "testez.toml",
-	"sourcemap.json", "DevPackages", "Packages", "Garbage"
+	"docs",
+	".moonwave",
+	"test",
+	"Hooks.rbxm",
+	"Hooks.rbxmx",
+	"BuildHooks.lua",
+	"changelog.md",
+	"README.md",
+	".styluaignore",
+	".gitignore",
+	"foreman.toml",
+	"Luau.toml",
+	"moonwave.toml",
+	"rotriever.toml",
+	"selene.toml",
+	"stylua.toml",
+	"testez-companion.toml",
+	"testez.toml",
+	"sourcemap.json",
+	"DevPackages",
+	"Packages",
+	"Garbage",
 ]
 
 [dependencies]
 LuauPolyfill = "jsdotlua/luau-polyfill@1.2.3"
 Promise = "evaera/promise@4.0.0-rc.2"
-React = "core-packages/react@17.0.1-rc.18"
-ReactRoblox = "core-packages/react-roblox@17.0.1-rc.16"
+React = "jsdotlua/react@17.0.2"
+ReactRoblox = "jsdotlua/react-roblox@17.0.2"
