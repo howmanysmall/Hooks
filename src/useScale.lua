@@ -8,6 +8,10 @@ local TOP_INSET, BOTTOM_INSET = GuiService:GetGuiInset()
 --[=[
 	A hook used for scaling UI elements to fit the current screen.
 
+	:::info
+	This is intended to be used with UIScale objects.
+	:::
+
 	@tag UI
 	@client
 	@within Hooks
