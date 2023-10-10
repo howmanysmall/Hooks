@@ -1,6 +1,4 @@
 {
-  "name": "project",
-  "tree": {
-    "$className": "DataModel"
-  }
+  "name": "Hooks",
+  "tree": {"$path": "src"}
 }

@@ -1,3 +1,4 @@
 [tools]
-rojo = "UpliftGames/rojo@7.2.2-uplift.release.8"
+lune = "filiptibell/lune@0.7.8"
+rojo = "rojo-rbx/rojo@7.4.0-rc2"
 wally = "UpliftGames/wally@0.3.1"

@@ -1,6 +1,6 @@
 [package]
 name = "howmanysmall/hooks"
-version = "1.4.2"
+version = "1.4.3"
 registry = "https://github.com/UpliftGames/wally-index"
 authors = ["HowManySmall"]
 realm = "shared"
